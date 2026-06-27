@@ -1,0 +1,99 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card styling */
+.product-card {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff, #f7f7ff);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.product-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-right: 20px;
+}
+
+/* Title */
+.product-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Rating */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rating-number {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.rating-star {
+  filter: drop-shadow(0px 0px 2px #ffa726);
+}
+
+/* Price */
+.price-tag {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.discount-badge {
+  background: #ff1744;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.see-more-btn {
+  border-radius: 25px;
+  padding: 8px 18px;
+  background: #6c757d;
+  transition: all .25s ease;
+}
+
+.see-more-btn:hover {
+  background: #5a6268;
+  box-shadow: 0 0 10px rgba(108,117,125,0.5);
+}
+
+.add-btn {
+  border-radius: 25px;
+  padding: 8px 18px;
+  background: #007bff;
+  transition: all .25s ease;
+}
+
+.add-btn:hover {
+  background: #0069d9;
+  box-shadow: 0 0 12px rgba(0,123,255,0.6);
+}

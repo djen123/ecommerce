@@ -1,0 +1,19 @@
+.header{
+    background-color:rgba(105, 19, 157, 0.43)
+}
+.productImage{
+    max-width:300px;
+}
+.addToCartBtn{
+    max-width: 300px;
+}
+.brandName{
+    color:rgba(42, 79, 7, 0.43)
+}
+
+.account{
+    cursor: pointer;
+}
+.account:hover{
+    color:burlywood;
+}
