@@ -70,18 +70,17 @@ Tech Stack
 
 ---
 
-## 🚀 Getting Started
+
 
 Install dependencies:
-
 
 npm install @vite latest
 npm install react-bootstrap
 npm install react-dom
-```
 
 
-  Improvements
+
+ Further  improvements  can be done by creating additional features such as :
 - Search bar
 
 - Wishlist system
@@ -93,3 +92,4 @@ npm install react-dom
 - Checkout page
 
 - Featured products carousel
+
