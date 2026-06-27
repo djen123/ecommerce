@@ -3,18 +3,18 @@ import Card from "react-bootstrap/Card";
 import star from "../assets/star.png";
 
 function Cart({ products, cart, setCart }) {
-  // Merge product info + qty
+  //  product info + qty
   const cartProducts = cart.map((item) => {
     const product = products.find((p) => p.id === item.id);
     return { ...product, qty: item.qty };
   });
 
-  // Remove item
+  // Remove item from the list
   function handleRemove(id) {
     setCart(cart.filter((item) => item.id !== id));
   }
 
-  // Increase qty
+  // Increase qty function
   function increaseQty(id) {
     setCart(
       cart.map((item) =>
@@ -23,7 +23,7 @@ function Cart({ products, cart, setCart }) {
     );
   }
 
-  // Decrease qty
+  // decrease qty function
   function decreaseQty(id) {
     setCart(
       cart.map((item) =>
@@ -34,7 +34,7 @@ function Cart({ products, cart, setCart }) {
     );
   }
 
-  // Grand total
+  // total
   const grandTotal = cartProducts
     .reduce((sum, p) => sum + p.price * p.qty, 0)
     .toFixed(2);
@@ -53,6 +53,12 @@ function Cart({ products, cart, setCart }) {
             className="productImage"
             variant="top"
             src={product.thumbnail}
+              style={{
+    width: "120px",
+    height: "120px",
+    objectFit: "cover",
+    borderRadius: "8px"
+  }}
           />
 
           <Card.Body className="d-flex flex-column gap-3">
@@ -72,7 +78,7 @@ function Cart({ products, cart, setCart }) {
               </Card.Text>
             </div>
 
-            {/* Quantity Controls */}
+            {/* Quantity  */}
             <div className="d-flex align-items-center gap-3">
               <Button
                 variant="outline-secondary"
@@ -91,7 +97,7 @@ function Cart({ products, cart, setCart }) {
               </Button>
             </div>
 
-            {/* Remove Button */}
+            {/* remove button */}
             <Button
               variant="danger"
               className="rounded-pill"
@@ -103,10 +109,10 @@ function Cart({ products, cart, setCart }) {
         </Card>
       ))}
 
-      {/* Grand Total */}
+      {/* Total calculation */}
       {cart.length > 0 && (
         <h3 className="mt-4">
-          Grand Total: <span className="text-success">£{grandTotal}</span>
+           Total: <span className="text-success">£{grandTotal}</span>
         </h3>
       )}
     </>

@@ -31,6 +31,11 @@ function AppNavbar({ cart }) {
               Cart <span className="badge bg-warning text-dark">{cart.length}</span>
             </Nav.Link>
           </Nav>
+             <Nav>
+            <Nav.Link as={NavLink} to="/account" className="text-white">
+              Account
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

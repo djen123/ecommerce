@@ -52,13 +52,13 @@ function ProductDetails({ products,setCart,cart }) {
           </div>
         </div>
 
-        {/* PRODUCT INFO */}
+        {/* Product details */}
         <Card className="flex-grow-1 p-3">
           <Card.Body className="d-flex flex-column gap-3">
 
             <Card.Title className="fs-2">{product.title}</Card.Title>
 
-            {/* RATING */}
+            {/* Rating */}
             <div className="d-flex align-items-center gap-2">
               <span className="fw-bold">{product.rating}</span>
               {[...new Array(Math.round(product.rating))].map((_, index) => (
@@ -67,7 +67,7 @@ function ProductDetails({ products,setCart,cart }) {
               <span className="text-muted">({product.reviews.length} reviews)</span>
             </div>
 
-            {/* PRICE */}
+            {/* Price */}
             <div className="fs-3">
               <span className="text-success fw-bold">£{finalPrice}</span>
               <span className="text-decoration-line-through text-muted ms-2">
@@ -78,7 +78,7 @@ function ProductDetails({ products,setCart,cart }) {
               </span>
             </div>
 
-            {/* QUANTITY SELECTOR */}
+            {/* selector for quantity */}
             <div className="d-flex align-items-center gap-3">
               <Button
                 variant="outline-secondary"
@@ -92,7 +92,7 @@ function ProductDetails({ products,setCart,cart }) {
               </Button>
             </div>
 
-            {/* ADD TO CART */}
+            {/* cart add */}
             <Button variant="primary" className="rounded-pill"   onClick = {()=>{
                 const exist = cart.find((item=>item.id=== product.id))
                 if(exist){
@@ -108,7 +108,7 @@ function ProductDetails({ products,setCart,cart }) {
               Add {qty} to Cart
             </Button>
 
-            {/* BACK BUTTON */}
+            {/* back button*/}
             <Button as={Link} to="/products" variant="outline-dark">
               ← Back to Products
             </Button>
@@ -116,7 +116,7 @@ function ProductDetails({ products,setCart,cart }) {
         </Card>
       </div>
 
-      {/* PRODUCT SPECIFICATIONS */}
+      {/* Product specs */}
       <div>
         <h3>Specifications</h3>
         <ul className="list-group">
@@ -135,7 +135,7 @@ function ProductDetails({ products,setCart,cart }) {
         </ul>
       </div>
 
-      {/* REVIEWS */}
+      {/* reviews */}
       <div>
         <h3>Customer Reviews</h3>
         {product.reviews.map((review, i) => (

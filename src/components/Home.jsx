@@ -9,14 +9,7 @@ function Home({ categories }) {
     >
       <h1 className="fw-bold text-primary">ShoptiFy</h1>
       <h4 className="text-muted">Where shopping gets easier</h4>
-
-      <img src={onlineShopping} width="300" className="my-4 shadow rounded" />
-
-      <Link className="btn btn-primary btn-lg rounded-pill" to="/products">
-        Browse Products
-      </Link>
-
-      <h2 className="mt-5 fw-bold">Shop by Category</h2>
+  <h2 className="mt-5 fw-bold">Shop by Category</h2>
 
       <div className="row g-4 mt-3 justify-content-center">
        {categories?.map((cat, i) => (
